@@ -32,11 +32,6 @@ public class StudentController {
         return studentService.readById(studentId).orElse(null);
     }
 
-    @PutMapping(path = "{studentId}")
-    public void update(@PathVariable("studentId") Long studentId, @RequestBody Student student) {
-        studentService.updateById(studentId, student);
-    }
-
     @DeleteMapping(path = "{studentId}")
     public void deleteById(@PathVariable("studentId") Long studentId) {
         studentService.deleteById(studentId);

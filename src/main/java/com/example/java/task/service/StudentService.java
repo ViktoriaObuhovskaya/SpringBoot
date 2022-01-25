@@ -29,11 +29,6 @@ public class StudentService {
         return studentRepository.findById(studentId);
     }
 
-    public void updateById(Long studentId, Student student) {
-        student.setStudentId(studentId);
-        studentRepository.save(student);
-    }
-
     public void deleteById(Long studentId) {
         studentRepository.deleteById(studentId);
     }
